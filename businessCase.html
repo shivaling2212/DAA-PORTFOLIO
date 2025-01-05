@@ -16,7 +16,7 @@
             line-height: 1.6;
         }
 
-        h2 {
+        h1, h2, h3 {
             font-size: 2.5em;
             color: #f1c27d;
             margin-bottom: 20px;
@@ -24,7 +24,6 @@
 
         h3 {
             font-size: 1.8em;
-            color: #f1c27d;
             margin-top: 30px;
         }
 
@@ -94,12 +93,32 @@
             color: #e0e0e0;
         }
 
+        .button-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 1.5em;
+            color: #fff;
+            background-color: #f1c27d;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e0b97a;
+        }
+
         .sdg-section {
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 40px;
-            display: none; /* Initially hidden */
+            display: none;
         }
 
         .sdg-section h2 {
@@ -111,27 +130,6 @@
         .sdg-section ul {
             margin-top: 10px;
         }
-
-        /* Styling for the button */
-        .button-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .business-case-button {
-            padding: 20px 40px;
-            font-size: 1.5em;
-            color: #fff;
-            background-color: #f1c27d;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .business-case-button:hover {
-            background-color: #e0b97a;
-        }
     </style>
 </head>
 <body>
@@ -140,14 +138,14 @@
         <h1>Welcome to Praful's Webpage</h1>
         <p>Explore the world of algorithms and data structures with a deep dive into their various applications and principles.</p>
     </div>
-    <div class="button-container">
-    <button onclick="window.location.href='/Amaravati-city-design.github.io/Praful/praful1.html'">PROBLEMS</button>
-</div>
 
+    <div class="button-container">
+        <button onclick="window.location.href='/Amaravati-city-design.github.io/Praful/praful1.html'">PROBLEMS</button>
+    </div>
 
     <!-- Button to Show/Hide Business Case Section -->
     <div class="button-container">
-        <button class="business-case-button" onclick="toggleSDGSection()">Business Case</button>
+        <button onclick="toggleSDGSection()">Business Case</button>
     </div>
 
     <!-- Business Case and Relevant SDG Section -->
@@ -188,3 +186,8 @@
             <li><strong>Sorting Algorithms</strong> - Algorithms like *Quick Sort* or *Merge Sort* can be used to efficiently organize data, such as ranking schools by available resources, or sorting energy usage patterns to prioritize areas of high demand.</li>
         </ul>
     </div>
+
+    <script>
+        function toggleSDGSection() {
+            const sdgSection = document.getElementById('sdg-section');
+            sdgSection.style.display = s
